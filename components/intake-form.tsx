@@ -44,6 +44,7 @@ export function IntakeForm() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [orderRef, setOrderRef] = useState("")
   const [errorMessage, setErrorMessage] = useState("")
+  const [fieldErrors, setFieldErrors] = useState<{ jobDescription?: string; workHistory?: string }>({})
   
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
@@ -72,7 +73,20 @@ export function IntakeForm() {
     setFormData(prev => ({ ...prev, [field]: value }))
   }
 
+  const VALIDATION_MSG = "Please provide more detail — the more you share, the stronger your resume will be."
+
   const nextStep = () => {
+    // Validate detail fields on step 3
+    if (currentStep === 3) {
+      const errors: { jobDescription?: string; workHistory?: string } = {}
+      if (formData.jobDescription.trim().length < 150) errors.jobDescription = VALIDATION_MSG
+      if (formData.workHistory.trim().length < 200) errors.workHistory = VALIDATION_MSG
+      if (Object.keys(errors).length > 0) {
+        setFieldErrors(errors)
+        return
+      }
+    }
+    setFieldErrors({})
     if (currentStep < 4) setCurrentStep(currentStep + 1)
   }
 
@@ -359,13 +373,25 @@ export function IntakeForm() {
               </label>
               <textarea 
                 value={formData.jobDescription}
-                onChange={(e) => updateField('jobDescription', e.target.value)}
+                onChange={(e) => {
+                  updateField('jobDescription', e.target.value)
+                  if (fieldErrors.jobDescription && e.target.value.trim().length >= 150) {
+                    setFieldErrors(prev => ({ ...prev, jobDescription: undefined }))
+                  }
+                }}
                 placeholder="Paste the full job description here — requirements, responsibilities, preferred qualifications. The more complete, the better we can tailor your resume."
-                className="w-full px-4 py-3 border border-fog3 bg-fog text-xs text-ink placeholder:text-ink/25 focus:border-gold focus:bg-white outline-none transition-colors resize-y min-h-[160px] leading-[1.75]"
+                className={`w-full px-4 py-3 border bg-fog text-xs text-ink placeholder:text-ink/25 focus:bg-white outline-none transition-colors resize-y min-h-[160px] leading-[1.75] ${fieldErrors.jobDescription ? 'border-red-400 focus:border-red-400' : 'border-fog3 focus:border-gold'}`}
               />
-              <p className="text-[9px] text-ink/35 mt-1.5 leading-relaxed tracking-wide">
-                Copy and paste directly from the job posting. Include everything.
-              </p>
+              <div className="flex items-start justify-between mt-1.5 gap-4">
+                {fieldErrors.jobDescription ? (
+                  <p className="text-[9px] text-red-500 leading-relaxed tracking-wide">{fieldErrors.jobDescription}</p>
+                ) : (
+                  <p className="text-[9px] text-ink/35 leading-relaxed tracking-wide">Copy and paste directly from the job posting. Include everything.</p>
+                )}
+                <p className={`text-[9px] shrink-0 tracking-wide ${formData.jobDescription.trim().length >= 150 ? 'text-green-600' : 'text-ink/35'}`}>
+                  {formData.jobDescription.trim().length} / 150
+                </p>
+              </div>
             </div>
 
             <div className="mb-5">
@@ -374,10 +400,25 @@ export function IntakeForm() {
               </label>
               <textarea 
                 value={formData.workHistory}
-                onChange={(e) => updateField('workHistory', e.target.value)}
+                onChange={(e) => {
+                  updateField('workHistory', e.target.value)
+                  if (fieldErrors.workHistory && e.target.value.trim().length >= 200) {
+                    setFieldErrors(prev => ({ ...prev, workHistory: undefined }))
+                  }
+                }}
                 placeholder={"List your work experience, key responsibilities, and accomplishments including:\n• Job titles, companies, dates\n• Key responsibilities\n• Measurable achievements (saved $X, reduced time by X%, managed team of X)\n• Certifications, education, skills"}
-                className="w-full px-4 py-3 border border-fog3 bg-fog text-xs text-ink placeholder:text-ink/25 focus:border-gold focus:bg-white outline-none transition-colors resize-y min-h-[200px] leading-[1.75]"
+                className={`w-full px-4 py-3 border bg-fog text-xs text-ink placeholder:text-ink/25 focus:bg-white outline-none transition-colors resize-y min-h-[200px] leading-[1.75] ${fieldErrors.workHistory ? 'border-red-400 focus:border-red-400' : 'border-fog3 focus:border-gold'}`}
               />
+              <div className="flex items-start justify-between mt-1.5 gap-4">
+                {fieldErrors.workHistory ? (
+                  <p className="text-[9px] text-red-500 leading-relaxed tracking-wide">{fieldErrors.workHistory}</p>
+                ) : (
+                  <p className="text-[9px] text-ink/35 leading-relaxed tracking-wide">The more detail you provide, the better your resume will be.</p>
+                )}
+                <p className={`text-[9px] shrink-0 tracking-wide ${formData.workHistory.trim().length >= 200 ? 'text-green-600' : 'text-ink/35'}`}>
+                  {formData.workHistory.trim().length} / 200
+                </p>
+              </div>
             </div>
 
             <div className="mb-5">
