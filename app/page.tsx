@@ -1,5 +1,6 @@
 'use client'
 
+// Landing page - certification selector
 import Link from 'next/link'
 
 interface Certification {
