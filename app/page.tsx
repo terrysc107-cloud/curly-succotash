@@ -83,8 +83,8 @@ const PLANS = [
   },
   {
     name: "Pro",
-    price: "$99",
-    period: " one time",
+    price: "$14.99",
+    period: "/month",
     highlight: true,
     features: [
       "Unlimited practice questions",
@@ -94,12 +94,12 @@ const PLANS = [
       "Pause & resume any session",
       "Priority badge processing",
     ],
-    cta: "Get Pro",
-    note: "One-time payment, lifetime access",
+    cta: "Start Pro",
+    note: "Cancel anytime",
   },
   {
     name: "Lifetime",
-    price: "$49",
+    price: "$99",
     period: " one time",
     highlight: false,
     features: [
@@ -637,7 +637,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* ── FINAL CTA ────────────────────────────────────────────────────── */}
+        {/* ── FINAL CTA ──────────────────────���─────────────────────────────── */}
         <section style={{ padding: "6rem 1.5rem", textAlign: "center", position: "relative", overflow: "hidden" }}>
           <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at center, rgba(13,115,119,0.15) 0%, transparent 70%)", pointerEvents: "none" }} />
           <div style={{ position: "relative", zIndex: 2, maxWidth: 620, margin: "0 auto" }}>
