@@ -597,17 +597,17 @@ export default function LandingPage() {
           <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
             <p style={{ color: "#14BDAC", fontFamily: "'DM Mono', monospace", fontSize: "0.75rem", letterSpacing: "0.12em", marginBottom: "1rem" }}>FOR FACILITIES & DEPARTMENTS</p>
             <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)", fontWeight: 900, marginBottom: "1rem" }}>
-              Need to train your whole team?
+              Do you need professional study assistance?
             </h2>
             <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "1rem", lineHeight: 1.7, marginBottom: "2rem", fontWeight: 300 }}>
-              Aseptic Technical Solutions provides on-site certification prep, compliance training, and department consulting for SPD teams across the country. When your techs are ready to go further, we're ready to help them get there.
+              Aseptic Technical Solutions offers a proven certification training program with flexible options built for every learner — in-person classes, live virtual sessions, and self-study formats. Whether you are preparing solo or building a high-performing SPD team, our expert instructors are ready to help you get certified and stay compliant.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <a href="https://aseptictechnicalsolutions.com" className="btn-primary" style={{ textDecoration: "none" }}>
-                Contact Aseptic Technical Solutions →
+                Explore Training Programs at Aseptic Technical Solutions
               </a>
-              <a href="/dashboard" className="btn-ghost" style={{ textDecoration: "none" }}>
-                Individual sign up
+              <a href="mailto:contact@aseptictechnicalsolutions.com" className="btn-ghost" style={{ textDecoration: "none" }}>
+                Contact Us Directly
               </a>
             </div>
           </div>
