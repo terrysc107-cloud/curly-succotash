@@ -252,11 +252,18 @@ export default function PassedExamFlow() {
     setStep("verifying");
 
     const { data: { user } } = await supabase.auth.getUser();
+    
+    // User must be authenticated to claim badge
+    if (!user) {
+      setStep("entry");
+      setErrors({ submit: "Please sign in to claim your badge. Visit the dashboard to create an account." });
+      return;
+    }
 
     const { error } = await supabase
       .from("certified_users")
       .insert({
-        user_id: user?.id,
+        user_id: user.id,
         full_name: name,
         hspa_member: hspaMember,
         cert,
@@ -265,7 +272,11 @@ export default function PassedExamFlow() {
 
     if (error) {
       setStep("entry");
-      setErrors({ submit: "Something went wrong. Please try again." });
+      if (error.code === "23505") {
+        setErrors({ submit: "You have already claimed this certification badge." });
+      } else {
+        setErrors({ submit: "Something went wrong. Please try again." });
+      }
       return;
     }
 
@@ -433,6 +444,21 @@ export default function PassedExamFlow() {
                 }}
               />
             </div>
+
+            {/* Submit error */}
+            {errors.submit && (
+              <div style={{
+                background: "rgba(232,93,4,0.15)",
+                border: "1px solid rgba(232,93,4,0.4)",
+                borderRadius: "10px",
+                padding: "0.85rem 1rem",
+                marginBottom: "1rem",
+              }}>
+                <p style={{ color: "#E85D04", fontSize: "0.88rem", margin: 0, fontFamily: "Calibri, sans-serif" }}>
+                  {errors.submit}
+                </p>
+              </div>
+            )}
 
             {/* Submit */}
             <button
