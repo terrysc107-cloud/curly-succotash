@@ -260,6 +260,8 @@ export default function PassedExamFlow() {
       return;
     }
 
+    console.log("[v0] Attempting badge claim for user:", user.id, "cert:", cert);
+    
     const { error } = await supabase
       .from("certified_users")
       .insert({
@@ -270,12 +272,16 @@ export default function PassedExamFlow() {
         pass_date: new Date().toISOString().split("T")[0],
       });
 
+    console.log("[v0] Insert result - error:", error);
+
     if (error) {
       setStep("entry");
       if (error.code === "23505") {
         setErrors({ submit: "You have already claimed this certification badge." });
+      } else if (error.code === "42P01") {
+        setErrors({ submit: "Badge system is being set up. Please try again in a few minutes." });
       } else {
-        setErrors({ submit: "Something went wrong. Please try again." });
+        setErrors({ submit: `Something went wrong: ${error.message}` });
       }
       return;
     }
@@ -766,7 +772,7 @@ export default function PassedExamFlow() {
                   padding: "0.5rem 0",
                   borderBottom: i < 4 ? "1px solid rgba(255,255,255,0.05)" : "none",
                 }}>
-                  <span style={{ color: nextCfg.accent, fontSize: "0.9rem" }}>✓</span>
+                  <span style={{ color: nextCfg.accent, fontSize: "0.9rem" }}>���</span>
                   <span style={{ color: "#D0E4EE", fontSize: "0.88rem", fontFamily: "Calibri, sans-serif" }}>{item}</span>
                 </div>
               ))}
