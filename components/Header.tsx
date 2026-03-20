@@ -15,7 +15,7 @@ export default function Header({ user, streak = 0 }: HeaderProps) {
 
   return (
     <header className="bg-navy sticky top-0 z-50 px-6 py-4 flex justify-between items-center">
-      <Link href="/" className="hover:opacity-80 transition">
+      <Link href="/dashboard" className="hover:opacity-80 transition">
         <div className="font-serif text-teal-3 text-sm">
           SPD Cert <em className="text-amber">Companion</em>
         </div>
