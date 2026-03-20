@@ -766,7 +766,7 @@ export default function PassedExamFlow() {
                   padding: "0.5rem 0",
                   borderBottom: i < 4 ? "1px solid rgba(255,255,255,0.05)" : "none",
                 }}>
-                  <span style={{ color: nextCfg.accent, fontSize: "0.9rem" }}>✓</span>
+                  <span style={{ color: nextCfg.accent, fontSize: "0.9rem" }}>���</span>
                   <span style={{ color: "#D0E4EE", fontSize: "0.88rem", fontFamily: "Calibri, sans-serif" }}>{item}</span>
                 </div>
               ))}
