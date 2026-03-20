@@ -260,8 +260,6 @@ export default function PassedExamFlow() {
       return;
     }
 
-    console.log("[v0] Attempting badge claim for user:", user.id, "cert:", cert);
-    
     const { error } = await supabase
       .from("certified_users")
       .insert({
@@ -272,16 +270,12 @@ export default function PassedExamFlow() {
         pass_date: new Date().toISOString().split("T")[0],
       });
 
-    console.log("[v0] Insert result - error:", error);
-
     if (error) {
       setStep("entry");
       if (error.code === "23505") {
         setErrors({ submit: "You have already claimed this certification badge." });
-      } else if (error.code === "42P01") {
-        setErrors({ submit: "Badge system is being set up. Please try again in a few minutes." });
       } else {
-        setErrors({ submit: `Something went wrong: ${error.message}` });
+        setErrors({ submit: "Something went wrong. Please try again." });
       }
       return;
     }
