@@ -1,9 +1,9 @@
 export function HowItWorksSection() {
   const steps = [
-    { icon: "📝", title: "Submit Your Info", desc: "Fill out our intake form with your work history, target job description, and goals. Takes about 5 minutes." },
-    { icon: "🔍", title: "AI Researches the Role", desc: "Our AI analyzes the job description, extracts ATS keywords, identifies company culture signals, and maps your strongest positioning angle." },
-    { icon: "✍️", title: "3 Resumes Generated", desc: "Three variations built from scratch: ATS-optimized, experience-forward chronological, and achievement-focused executive style." },
-    { icon: "📬", title: "Expert Review + Delivery", desc: "Our team reviews, formats into your chosen template, and emails you polished Word documents ready to send." },
+    { icon: "1", title: "Submit Your Info", desc: "Fill out our intake form with your work history, target job description, and goals. Takes about 5 minutes." },
+    { icon: "2", title: "AI Researches the Role", desc: "Our AI analyzes the job description, extracts ATS keywords, identifies company culture signals, and maps your strongest positioning angle." },
+    { icon: "3", title: "3 Resumes Generated", desc: "Three variations built from scratch: ATS-optimized, experience-forward chronological, and achievement-focused executive style." },
+    { icon: "4", title: "Expert Review + Delivery", desc: "Our team reviews, formats into your chosen template, and emails you polished Word documents ready to send." },
   ]
 
   return (
