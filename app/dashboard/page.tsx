@@ -203,13 +203,7 @@ export default function DashboardPage() {
                 <p className="text-sm text-text-3 mb-4 leading-relaxed">
                   {cert.description}
                 </p>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className={`font-serif text-2xl font-bold ${cert.color}`}>
-                      {cert.questionCount}
-                    </div>
-                    <div className="text-xs text-text-3">Questions</div>
-                  </div>
+                <div className="flex items-center justify-end">
                   <div className="w-10 h-10 rounded-full bg-cream-2 flex items-center justify-center group-hover:bg-teal group-hover:text-white transition-colors">
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -232,11 +226,7 @@ export default function DashboardPage() {
               <p className="text-sm text-text-3 mb-4 leading-relaxed">
                 Real-world scenarios. Build decision-making skills beyond the exam.
               </p>
-              <div className="flex items-center justify-between">
-                <div>
-                  <div className="font-serif text-2xl font-bold text-amber">30</div>
-                  <div className="text-xs text-text-3">Scenarios</div>
-                </div>
+              <div className="flex items-center justify-end">
                 <div className="w-10 h-10 rounded-full bg-cream-2 flex items-center justify-center group-hover:bg-amber group-hover:text-white transition-colors">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
