@@ -2,6 +2,7 @@
 // CHL (Certified Healthcare Leader) Question Bank
 // Source: Sterile Processing Leadership Manual - Review Quizzes 1-24
 // 240 questions across all chapters
+// Fixed ampersands - Build v3
 
 export type Difficulty = "easy" | "medium" | "hard";
 
@@ -21,7 +22,7 @@ export const chlQuestions: Question[] = [
   // ── QUIZ 1 ── Leadership Fundamentals (Ch. 1)
   {
     id: "chl-1-1",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 1,
     question: "Sterile Processing leaders manage:",
     options: {
@@ -36,7 +37,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-1-2",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 1,
     question: "Open communication flows:",
     options: {
@@ -51,7 +52,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-1-3",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 1,
     question: "An inappropriate relationship with a vendor could pose a/an:",
     options: {
@@ -66,7 +67,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-1-4",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 1,
     question: "The beliefs, values and norms shared by department personnel and passed to new employees are collectively known as:",
     options: {
@@ -81,7 +82,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-1-5",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 1,
     question: "Span of control relates to the:",
     options: {
@@ -96,7 +97,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-1-6",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 1,
     question: "Guidelines adopted for the protection of patients, families and the healthcare facility are called:",
     options: {
@@ -111,7 +112,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-1-7",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 1,
     question: "The identified reason for a problem or defect is called the:",
     options: {
@@ -126,7 +127,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-1-8",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 1,
     question: "The organizing principle that suggests each employee should have only one supervisor is called:",
     options: {
@@ -141,7 +142,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-1-9",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 1,
     question: "Successful leaders build teams by:",
     options: {
@@ -156,7 +157,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-1-10",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 1,
     question: "Which statement is true about SP leaders?",
     options: {
@@ -629,7 +630,7 @@ export const chlQuestions: Question[] = [
   // ── QUIZ 5 ── Education & Training (Ch. 5)
   {
     id: "chl-5-1",
-    domain: "Education & Training",
+    domain: "Education and Training",
     chapter: 5,
     question: "Non-traditional education methods include:",
     options: {
@@ -644,7 +645,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-5-2",
-    domain: "Education & Training",
+    domain: "Education and Training",
     chapter: 5,
     question: "Onboarding helps new employees meet existing staff and:",
     options: {
@@ -659,7 +660,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-5-3",
-    domain: "Education & Training",
+    domain: "Education and Training",
     chapter: 5,
     question: "Staff development programs are successful when:",
     options: {
@@ -674,7 +675,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-5-4",
-    domain: "Education & Training",
+    domain: "Education and Training",
     chapter: 5,
     question: "When planning an inservice session, it is important to:",
     options: {
@@ -689,7 +690,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-5-5",
-    domain: "Education & Training",
+    domain: "Education and Training",
     chapter: 5,
     question: "Well-planned training sessions:",
     options: {
@@ -704,7 +705,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-5-6",
-    domain: "Education & Training",
+    domain: "Education and Training",
     chapter: 5,
     question: "Topics usually discussed during orientation include:",
     options: {
@@ -719,7 +720,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-5-7",
-    domain: "Education & Training",
+    domain: "Education and Training",
     chapter: 5,
     question: "Auditory learners learn best:",
     options: {
@@ -734,7 +735,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-5-8",
-    domain: "Education & Training",
+    domain: "Education and Training",
     chapter: 5,
     question: "Employees are more likely to stay at a facility that provides:",
     options: {
@@ -749,7 +750,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-5-9",
-    domain: "Education & Training",
+    domain: "Education and Training",
     chapter: 5,
     question: "A benefit of staff education is:",
     options: {
@@ -764,7 +765,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-5-10",
-    domain: "Education & Training",
+    domain: "Education and Training",
     chapter: 5,
     question: "Performance improvement inservice sessions typically focus on:",
     options: {
@@ -781,7 +782,7 @@ export const chlQuestions: Question[] = [
   // ── QUIZ 6 ── Leadership Styles & Professional Development (Ch. 6)
   {
     id: "chl-6-1",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 6,
     question: "Effective leaders:",
     options: {
@@ -796,7 +797,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-6-2",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 6,
     question: "One of the main regulation-setting organizations for the Sterile Processing department (SPD) is:",
     options: {
@@ -811,7 +812,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-6-3",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 6,
     question: "What is an effective way for leaders to be more accessible to the Sterile Processing (SP) team?",
     options: {
@@ -826,7 +827,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-6-4",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 6,
     question: "Organizations expect their leaders to:",
     options: {
@@ -841,7 +842,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-6-5",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 6,
     question: "Setting goals:",
     options: {
@@ -856,7 +857,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-6-6",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 6,
     question: "Mentors can:",
     options: {
@@ -871,7 +872,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-6-7",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 6,
     question: "Good leaders must:",
     options: {
@@ -886,7 +887,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-6-8",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 6,
     question: "A leader who does not want to offend anyone is called a/an:",
     options: {
@@ -901,7 +902,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-6-9",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 6,
     question: "Knowledge of standards is important because standards:",
     options: {
@@ -916,7 +917,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-6-10",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 6,
     question: "In addition to Sterile Processing–related regulations, leaders can obtain helpful resources from:",
     options: {
@@ -1085,7 +1086,7 @@ export const chlQuestions: Question[] = [
   // ── QUIZ 8 ── Accreditation & Surveys (Ch. 8)
   {
     id: "chl-8-1",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 8,
     question: "A sentinel event is:",
     options: {
@@ -1100,7 +1101,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-8-2",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 8,
     question: "During a TJC survey, tracer methodology may be used to follow a patient's journey and includes which step in the SPD?",
     options: {
@@ -1115,7 +1116,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-8-3",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 8,
     question: "When should survey preparation occur?",
     options: {
@@ -1130,7 +1131,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-8-4",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 8,
     question: "A benefit of hospital accreditation is:",
     options: {
@@ -1145,7 +1146,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-8-5",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 8,
     question: "What should a Sterile Processing (SP) leader do if they disagree with a surveyor's findings?",
     options: {
@@ -1160,7 +1161,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-8-6",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 8,
     question: "TJC typically surveys a facility once every:",
     options: {
@@ -1175,7 +1176,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-8-7",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 8,
     question: "If a serious adverse effect to the health or safety of patients is found during a TJC survey, the surveyor will issue a/an:",
     options: {
@@ -1190,7 +1191,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-8-8",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 8,
     question: "During a TJC survey, the surveyor is looking at the facility's:",
     options: {
@@ -1205,7 +1206,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-8-9",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 8,
     question: "An SPD must have manufacturer's instructions for use (IFU) for:",
     options: {
@@ -1220,7 +1221,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-8-10",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 8,
     question: "TJC has placed a specific emphasis on which of the following functions of the SPD?",
     options: {
@@ -1237,7 +1238,7 @@ export const chlQuestions: Question[] = [
   // ── QUIZ 9 ── Regulations & Law (Ch. 9)
   {
     id: "chl-9-1",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 9,
     question: "Which of the following does NOT qualify under the Family and Medical Leave Act (FMLA)?",
     options: {
@@ -1252,7 +1253,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-9-2",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 9,
     question: "Which U.S. FDA class of instruments is for low-risk devices such as most handheld surgical instruments?",
     options: {
@@ -1267,7 +1268,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-9-3",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 9,
     question: "During a lawsuit regarding medical device processing, an expert witness evaluates the processing according to which best practices?",
     options: {
@@ -1282,7 +1283,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-9-4",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 9,
     question: "The majority of Sterile Processing (SP) best practices are based on:",
     options: {
@@ -1297,7 +1298,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-9-5",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 9,
     question: "Who should complete MedWatch forms when a problem is discovered in or with a medical device?",
     options: {
@@ -1312,7 +1313,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-9-6",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 9,
     question: "The Health Insurance Portability and Accountability Act (HIPAA) is designed to protect which of the following patient rights?",
     options: {
@@ -1327,7 +1328,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-9-7",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 9,
     question: "What is an FDA 510(k) premarket notification?",
     options: {
@@ -1342,7 +1343,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-9-8",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 9,
     question: "What information must all employees have if they have hazardous chemicals in their workplace?",
     options: {
@@ -1357,7 +1358,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-9-9",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 9,
     question: "Which agency regulates general-purpose disinfectants intended for use with medical devices?",
     options: {
@@ -1372,7 +1373,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-9-10",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 9,
     question: "If a device is used for a clinical indication for which it is not approved, it is regarded as:",
     options: {
@@ -1541,7 +1542,7 @@ export const chlQuestions: Question[] = [
   // ── QUIZ 11 ── Infection Prevention & Control (Ch. 11)
   {
     id: "chl-11-1",
-    domain: "Infection Prevention & Control",
+    domain: "Infection Prevention and Control",
     chapter: 11,
     question: "As a cleaning, disinfection and sterilization subject matter expert, a Sterile Processing (SP) leader should sit on the:",
     options: {
@@ -1556,7 +1557,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-11-2",
-    domain: "Infection Prevention & Control",
+    domain: "Infection Prevention and Control",
     chapter: 11,
     question: "In healthcare facilities, who is responsible for infection prevention?",
     options: {
@@ -1571,7 +1572,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-11-3",
-    domain: "Infection Prevention & Control",
+    domain: "Infection Prevention and Control",
     chapter: 11,
     question: "Which of the following is NOT a primary mode of infection transmission?",
     options: {
@@ -1586,7 +1587,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-11-4",
-    domain: "Infection Prevention & Control",
+    domain: "Infection Prevention and Control",
     chapter: 11,
     question: "During a TJC survey, the assessment of the SPD is based on which of the following best practices?",
     options: {
@@ -1601,7 +1602,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-11-5",
-    domain: "Infection Prevention & Control",
+    domain: "Infection Prevention and Control",
     chapter: 11,
     question: "Which type of surgical site infection (SSI) involves the deep, soft tissue of the incision?",
     options: {
@@ -1616,7 +1617,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-11-6",
-    domain: "Infection Prevention & Control",
+    domain: "Infection Prevention and Control",
     chapter: 11,
     question: "What is considered the most effective way to prevent infection transmission?",
     options: {
@@ -1631,7 +1632,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-11-7",
-    domain: "Infection Prevention & Control",
+    domain: "Infection Prevention and Control",
     chapter: 11,
     question: "Healthcare scrub attire should be laundered:",
     options: {
@@ -1646,7 +1647,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-11-8",
-    domain: "Infection Prevention & Control",
+    domain: "Infection Prevention and Control",
     chapter: 11,
     question: "When performing a cleaning evaluation, which method uses cultures and adenosine triphosphate (ATP) monitoring?",
     options: {
@@ -1661,7 +1662,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-11-9",
-    domain: "Infection Prevention & Control",
+    domain: "Infection Prevention and Control",
     chapter: 11,
     question: "Which department must be notified if biological monitoring of a sterilizer shows a sterilization failure?",
     options: {
@@ -1676,7 +1677,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-11-10",
-    domain: "Infection Prevention & Control",
+    domain: "Infection Prevention and Control",
     chapter: 11,
     question: "Which action should be performed when a sterilization failure occurs?",
     options: {
@@ -1693,7 +1694,7 @@ export const chlQuestions: Question[] = [
   // ── QUIZ 12 ── SPD-OR Relationship (Ch. 12)
   {
     id: "chl-12-1",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 12,
     question: "The acronym SBAR stands for situation, background:",
     options: {
@@ -1708,7 +1709,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-12-2",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 12,
     question: "OR personnel respecting the work of SP professionals and choosing not to blame them when issues arise is an example of which individual characteristic?",
     options: {
@@ -1723,7 +1724,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-12-3",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 12,
     question: "A contextual factor is best described by which of the following?",
     options: {
@@ -1738,7 +1739,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-12-4",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 12,
     question: "Which of the following is NOT a contextual factor in the healthcare setting?",
     options: {
@@ -1753,7 +1754,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-12-5",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 12,
     question: "Encouraging collaboration and creating an environment of safety are suggested mitigation strategies for which factor that contributes to errors?",
     options: {
@@ -1768,7 +1769,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-12-6",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 12,
     question: "Unclear instructions are a factor that can contribute to errors. Which strategy is best for mitigating this factor?",
     options: {
@@ -1783,7 +1784,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-12-7",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 12,
     question: "A group of organized and interrelated elements that form a complex whole is best described as a/an:",
     options: {
@@ -1798,7 +1799,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-12-8",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 12,
     question: "Reviewing the expectations of both the SPD and OR is best described in which step in the process to improve relationships with the OR team?",
     options: {
@@ -1813,7 +1814,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-12-9",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 12,
     question: "The most important thing an SP leader can do to establish a strong relationship with the OR is:",
     options: {
@@ -1828,7 +1829,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-12-10",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 12,
     question: "Pam works the day shift. Every morning, she notices several sets remaining from the evening shift, leaving her with extra work. What common source of conflict does this represent?",
     options: {
@@ -2064,7 +2065,7 @@ export const chlQuestions: Question[] = [
       a: "AORN's Guidelines for Perioperative Practice",
       b: "HSPA's Sterile Processing Technical Manual, 9th edition",
       c: "ANSI/ASHRAE/ASHE Standard 170",
-      d: "ANSI/AAMI ST79:2017 & 2020 Amendments",
+      d: "ANSI/AAMI ST79:2017 and 2020 Amendments",
     },
     correct: "c",
     explanation: "ANSI/ASHRAE/ASHE Standard 170 governs HVAC systems in decontamination. (p. 173)",
@@ -3676,7 +3677,7 @@ export const chlQuestions: Question[] = [
   // ── PROGRESS TEST 1 (unique) ──
   {
     id: "chl-pt1-1",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 1,
     question: "The group of skills required to accomplish a specific task or function is called a/an:",
     options: {
@@ -3766,7 +3767,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt1-7",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 4,
     question: "A person who provides advice to a less-experienced staff member is called a:",
     options: {
@@ -3826,7 +3827,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt1-11",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 1,
     question: "Unfavorable or unfair treatment based on an individual's race, religion, gender, national origin, disability or sexual orientation is called:",
     options: {
@@ -3886,7 +3887,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt1-15",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 2,
     question: "A facility expert in running the business of processing, storing and transporting sterile products may be called a/an:",
     options: {
@@ -3901,7 +3902,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt1-16",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 3,
     question: "Not keeping meetings on track will:",
     options: {
@@ -3931,7 +3932,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt1-18",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 1,
     question: "Today's SP leaders manage departments in an environment of ever-changing technologies, increasing customer demands and limited resources. They are constantly challenged to attain goals that include all the following EXCEPT:",
     options: {
@@ -3948,7 +3949,7 @@ export const chlQuestions: Question[] = [
   // ── PROGRESS TEST 2 (unique) ──
   {
     id: "chl-pt2-1",
-    domain: "Education & Training",
+    domain: "Education and Training",
     chapter: 5,
     question: "Competency-based training should be conducted for all Sterile Processing (SP) staff members because:",
     options: {
@@ -3963,7 +3964,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt2-2",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 6,
     question: "Succession planning:",
     options: {
@@ -3993,7 +3994,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt2-4",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 8,
     question: "Accreditation is common in healthcare facilities, and it is:",
     options: {
@@ -4008,7 +4009,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt2-5",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 6,
     question: "Leaders with high emotional intelligence (EQ) levels:",
     options: {
@@ -4023,7 +4024,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt2-6",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 8,
     question: "What does RFI stand for?",
     options: {
@@ -4038,7 +4039,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt2-7",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 6,
     question: "Autocratic leaders:",
     options: {
@@ -4053,7 +4054,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt2-8",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 6,
     question: "Servant leaders:",
     options: {
@@ -4098,7 +4099,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt2-11",
-    domain: "Education & Training",
+    domain: "Education and Training",
     chapter: 5,
     question: "Which of the following would NOT be included in a surveyor's review of staff education?",
     options: {
@@ -4113,7 +4114,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt2-12",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 8,
     question: "SPD policies and procedures should be based on which of the following?",
     options: {
@@ -4128,7 +4129,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt2-13",
-    domain: "Education & Training",
+    domain: "Education and Training",
     chapter: 5,
     question: "The process of developing the knowledge, skills and attitudes necessary for staff members to perform required job tasks defines:",
     options: {
@@ -4143,7 +4144,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt2-14",
-    domain: "Education & Training",
+    domain: "Education and Training",
     chapter: 5,
     question: "The induction process includes:",
     options: {
@@ -4158,7 +4159,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt2-15",
-    domain: "Education & Training",
+    domain: "Education and Training",
     chapter: 5,
     question: "When planning educational sessions to address a departmental error, remember:",
     options: {
@@ -4173,7 +4174,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt2-16",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 8,
     question: "A benefit to a healthcare facility having deemed status for Medicare is:",
     options: {
@@ -4190,7 +4191,7 @@ export const chlQuestions: Question[] = [
   // ── PROGRESS TEST 3 (unique) ──
   {
     id: "chl-pt3-1",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 9,
     question: "The MedWatch database is used to:",
     options: {
@@ -4205,7 +4206,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt3-2",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 12,
     question: "Which best describes the 'S' in SBAR?",
     options: {
@@ -4235,7 +4236,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt3-4",
-    domain: "Infection Prevention & Control",
+    domain: "Infection Prevention and Control",
     chapter: 11,
     question: "Which method is considered a quantitative method to verify the cleanliness of the department?",
     options: {
@@ -4250,7 +4251,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt3-5",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 4,
     question: "STAT is a/an:",
     options: {
@@ -4265,7 +4266,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt3-6",
-    domain: "Infection Prevention & Control",
+    domain: "Infection Prevention and Control",
     chapter: 11,
     question: "Which agency's primary function is to investigate infection outbreaks and control diseases?",
     options: {
@@ -4295,7 +4296,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt3-8",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 12,
     question: "Which of the following is NOT a step discussed in the process to improve relationships with OR personnel?",
     options: {
@@ -4310,7 +4311,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt3-9",
-    domain: "Infection Prevention & Control",
+    domain: "Infection Prevention and Control",
     chapter: 11,
     question: "The ability of a microorganism to invade a host and avoid the host's resistance defense mechanisms is called:",
     options: {
@@ -4340,7 +4341,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt3-11",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 9,
     question: "Which class of devices is the most stringently regulated by the FDA?",
     options: {
@@ -4355,7 +4356,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt3-12",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 9,
     question: "Which of the following activities can be considered a HIPAA violation and result in job loss?",
     options: {
@@ -4370,7 +4371,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt3-13",
-    domain: "Infection Prevention & Control",
+    domain: "Infection Prevention and Control",
     chapter: 11,
     question: "What does an IPC department require before any type of construction or renovation occurs in an SPD?",
     options: {
@@ -4385,7 +4386,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt3-14",
-    domain: "Leadership & Management",
+    domain: "Leadership and Management",
     chapter: 12,
     question: "Which of the following is NOT an identified factor that influences conflict?",
     options: {
@@ -4400,7 +4401,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt3-15",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 8,
     question: "Which of the following evidence CANNOT be used during the discovery process of a lawsuit?",
     options: {
@@ -4415,7 +4416,7 @@ export const chlQuestions: Question[] = [
   },
   {
     id: "chl-pt3-16",
-    domain: "Regulatory & Compliance",
+    domain: "Regulatory and Compliance",
     chapter: 9,
     question: "According to the Hazard Communication Standard (HCS), which of the following is NOT required on a product label?",
     options: {
