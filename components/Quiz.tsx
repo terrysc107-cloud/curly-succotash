@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import type { Question } from '@/lib/questions'
+import { supabase } from '@/lib/supabase'
 
 interface QuizData {
   questions: Question[]
@@ -120,6 +121,15 @@ export default function Quiz({ quizData, mode, onComplete, onExit, onPause, user
     const newAnswers = [...answers]
     newAnswers[current] = idx
     setAnswers(newAnswers)
+
+    // Silent question attempts tracking
+    supabase.from('question_attempts').insert({
+      user_id: user?.id ?? null,
+      question_id: q.id,
+      cert: 'crcst',
+      was_correct: idx === q.correct_answer,
+      selected_answer: String.fromCharCode(65 + idx).toLowerCase(),
+    }).then(() => {})
 
     if (mode === 'practice') {
       setShowExplanation(true)

@@ -539,6 +539,10 @@ function AuthScreen() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [message, setMessage] = useState('')
+  const [targetCert, setTargetCert] = useState('')
+  const [examTimeline, setExamTimeline] = useState('')
+  const [experience, setExperience] = useState('')
+  const [referralSource, setReferralSource] = useState('')
 
   const handleAuth = async () => {
     if (!email || !password) {
@@ -554,8 +558,15 @@ function AuthScreen() {
       if (isSignUp) {
         const { data, error } = await supabase.auth.signUp({ email, password })
         if (error) throw error
-        if (data.session) {
-          // Auto logged in
+        if (data.session && data.user) {
+          // Save profile data
+          await supabase.from('profiles').upsert({
+            id: data.user.id,
+            target_cert: targetCert || null,
+            exam_timeline: examTimeline || null,
+            years_experience: experience || null,
+            referral_source: referralSource || null,
+          })
         } else {
           setMessage('Check your email to confirm your account!')
         }
@@ -623,8 +634,43 @@ function AuthScreen() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           onKeyPress={(e) => e.key === 'Enter' && handleAuth()}
-          className="w-full px-4 py-3 border border-cream-2 rounded-lg mb-4 text-sm font-mono focus:outline-none focus:border-amber"
+          className="w-full px-4 py-3 border border-cream-2 rounded-lg mb-3 text-sm font-mono focus:outline-none focus:border-amber"
         />
+
+        {isSignUp && (
+          <>
+            <select value={targetCert} onChange={e => setTargetCert(e.target.value)} className="w-full px-4 py-3 border border-cream-2 rounded-lg mb-3 text-sm font-mono focus:outline-none focus:border-amber bg-white">
+              <option value="">Which cert are you studying for?</option>
+              <option value="CRCST">CRCST — Central Service Technician</option>
+              <option value="CHL">CHL — Healthcare Leader</option>
+              <option value="CER">CER — Endoscope Reprocessor</option>
+              <option value="unsure">Not sure yet</option>
+            </select>
+            <select value={examTimeline} onChange={e => setExamTimeline(e.target.value)} className="w-full px-4 py-3 border border-cream-2 rounded-lg mb-3 text-sm font-mono focus:outline-none focus:border-amber bg-white">
+              <option value="">When is your exam?</option>
+              <option value="30days">Within 30 days</option>
+              <option value="1to3months">1–3 months</option>
+              <option value="3to6months">3–6 months</option>
+              <option value="nodateyet">No date set yet</option>
+            </select>
+            <select value={experience} onChange={e => setExperience(e.target.value)} className="w-full px-4 py-3 border border-cream-2 rounded-lg mb-3 text-sm font-mono focus:outline-none focus:border-amber bg-white">
+              <option value="">Years in sterile processing?</option>
+              <option value="entry">Less than 1 year</option>
+              <option value="early">1–3 years</option>
+              <option value="mid">3–5 years</option>
+              <option value="senior">5+ years</option>
+            </select>
+            <select value={referralSource} onChange={e => setReferralSource(e.target.value)} className="w-full px-4 py-3 border border-cream-2 rounded-lg mb-4 text-sm font-mono focus:outline-none focus:border-amber bg-white">
+              <option value="">How did you hear about us?</option>
+              <option value="coworker">Coworker or colleague</option>
+              <option value="socialmedia">Social media</option>
+              <option value="google">Google search</option>
+              <option value="instructor">Instructor or educator</option>
+              <option value="conference">HSPA / Conference</option>
+              <option value="other">Other</option>
+            </select>
+          </>
+        )}
 
         <button
           onClick={handleAuth}

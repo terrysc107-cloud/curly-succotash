@@ -67,7 +67,7 @@ export default function ChatBot() {
       {/* Toggle Button */}
       <button
         onClick={() => setOpen(!open)}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-teal text-white rounded-full flex items-center justify-center hover:bg-teal-2 shadow-xl transition-all duration-300 hover:scale-110 z-50"
+        className="fixed bottom-6 left-6 w-12 h-12 bg-teal text-white rounded-full flex items-center justify-center hover:bg-teal-2 shadow-xl transition-all duration-300 hover:scale-110 z-50"
         aria-label="Toggle chat"
       >
         {open ? (
@@ -103,7 +103,7 @@ export default function ChatBot() {
 
       {/* Chat Window */}
       {open && (
-        <div className="fixed bottom-24 right-6 w-80 sm:w-96 h-[450px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden z-50 slide-up border border-cream-2">
+        <div className="fixed bottom-24 left-6 w-80 sm:w-96 h-[450px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden z-50 slide-up border border-cream-2">
           {/* Header */}
           <div className="bg-navy text-white px-4 py-3 flex justify-between items-center">
             <div>
