@@ -3666,13 +3666,10 @@ export const chlQuestions: Question[] = [
     explanation: "A computer virus copies itself by modifying other programs and inserting its own code. (p. 308)",
     difficulty: "easy",
   },
-];
 
-// ── Utility helpers ──────────────────────────────────────────────────────────
-
-// ── PROGRESS TESTS — UNIQUE QUESTIONS ONLY ──────────────────────────────────
-// Extracted from Progress Tests 1–6. Questions already covered in Quizzes 1–24
-// are excluded to avoid duplication. ~80 net-new questions appended below.
+  // ── PROGRESS TESTS — UNIQUE QUESTIONS ONLY ──────────────────────────────────
+  // Extracted from Progress Tests 1–6. Questions already covered in Quizzes 1–24
+  // are excluded to avoid duplication. ~80 net-new questions appended below.
 
   // ── PROGRESS TEST 1 (unique) ──
   {

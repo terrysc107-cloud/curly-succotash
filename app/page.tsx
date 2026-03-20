@@ -1,9 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { QUESTIONS as CRCST_QUESTIONS } from '@/lib/questions'
-import { QUESTIONS as CHL_QUESTIONS } from '@/lib/questions-chl'
-import { QUESTIONS as CER_QUESTIONS } from '@/lib/questions-cer'
 
 interface Certification {
   id: string
@@ -22,7 +19,7 @@ const certifications: Certification[] = [
     name: 'CRCST',
     fullName: 'Certified Registered Central Service Technician',
     description: 'Master sterile processing fundamentals, decontamination, sterilization, and instrument handling',
-    questionCount: CRCST_QUESTIONS.length,
+    questionCount: 400,
     color: 'text-teal',
     bgGradient: 'from-teal to-teal-2',
     href: '/crcst',
@@ -32,7 +29,7 @@ const certifications: Certification[] = [
     name: 'CHL',
     fullName: 'Certified Healthcare Leader',
     description: 'Master leadership, management, communication, and human resources in sterile processing',
-    questionCount: CHL_QUESTIONS.length,
+    questionCount: 240,
     color: 'text-amber',
     bgGradient: 'from-amber to-yellow-500',
     href: '/chl',
@@ -42,12 +39,14 @@ const certifications: Certification[] = [
     name: 'CER',
     fullName: 'Certified Endoscope Reprocessor',
     description: 'Master endoscope anatomy, reprocessing procedures, microbiology, and quality assurance',
-    questionCount: CER_QUESTIONS.length,
+    questionCount: 360,
     color: 'text-blue-500',
     bgGradient: 'from-blue-500 to-blue-600',
     href: '/cer',
   },
 ]
+
+const totalQuestions = 400 + 240 + 360
 
 export default function LandingPage() {
   return (
@@ -82,7 +81,7 @@ export default function LandingPage() {
           <div className="flex justify-center gap-8 text-center">
             <div>
               <div className="font-serif text-3xl text-amber">
-                {CRCST_QUESTIONS.length + CHL_QUESTIONS.length + CER_QUESTIONS.length}+
+                {totalQuestions}+
               </div>
               <div className="text-xs text-teal-3 uppercase tracking-wider">Questions</div>
             </div>
