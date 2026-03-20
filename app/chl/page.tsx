@@ -644,7 +644,6 @@ function AuthScreen() {
               <option value="CRCST">CRCST — Central Service Technician</option>
               <option value="CHL">CHL — Healthcare Leader</option>
               <option value="CER">CER — Endoscope Reprocessor</option>
-              <option value="CIS">CIS — Instrument Specialist</option>
               <option value="unsure">Not sure yet</option>
             </select>
             <select value={examTimeline} onChange={e => setExamTimeline(e.target.value)} className="w-full px-4 py-3 border border-cream-2 rounded-lg mb-3 text-sm font-mono focus:outline-none focus:border-amber bg-white">

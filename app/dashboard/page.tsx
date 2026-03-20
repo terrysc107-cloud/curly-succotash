@@ -186,7 +186,7 @@ export default function DashboardPage() {
         <div className="text-xs tracking-widest text-text-3 mb-6 text-center">
           SELECT YOUR CERTIFICATION
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6 mb-6">
           {certifications.map((cert) => (
             <Link
               key={cert.id}
@@ -198,7 +198,6 @@ export default function DashboardPage() {
                 <div className="font-serif text-3xl font-bold mb-1">{cert.name}</div>
                 <div className="text-sm opacity-90">{cert.fullName}</div>
               </div>
-              
               {/* Card Body */}
               <div className="p-6">
                 <p className="text-sm text-text-3 mb-4 leading-relaxed">
@@ -220,6 +219,32 @@ export default function DashboardPage() {
               </div>
             </Link>
           ))}
+          {/* Situational Judgment Card — inline with cert cards */}
+          <div
+            onClick={() => router.push("/quiz/scenarios")}
+            className="group bg-white border-2 border-cream-2 rounded-xl overflow-hidden hover:border-amber hover:shadow-xl transition-all duration-300 cursor-pointer"
+          >
+            <div className="bg-gradient-to-r from-amber to-yellow-500 p-6 text-white">
+              <div className="font-serif text-3xl font-bold mb-1">SJT</div>
+              <div className="text-sm opacity-90">Situational Judgment</div>
+            </div>
+            <div className="p-6">
+              <p className="text-sm text-text-3 mb-4 leading-relaxed">
+                Real-world scenarios. Build decision-making skills beyond the exam.
+              </p>
+              <div className="flex items-center justify-between">
+                <div>
+                  <div className="font-serif text-2xl font-bold text-amber">30</div>
+                  <div className="text-xs text-text-3">Scenarios</div>
+                </div>
+                <div className="w-10 h-10 rounded-full bg-cream-2 flex items-center justify-center group-hover:bg-amber group-hover:text-white transition-colors">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -246,39 +271,7 @@ export default function DashboardPage() {
             ))}
           </div>
 
-          {/* Situational Judgment Card */}
-          <div
-            onClick={() => router.push("/quiz/scenarios")}
-            style={{
-              background: "rgba(232,160,32,0.05)",
-              border: "2px solid rgba(232,160,32,0.25)",
-              borderRadius: "16px",
-              padding: "1.5rem",
-              cursor: "pointer",
-              transition: "all 0.2s",
-              maxWidth: "400px",
-              margin: "0 auto",
-            }}
-            onMouseEnter={e => {
-              e.currentTarget.style.borderColor = "#E8A020";
-              e.currentTarget.style.background = "rgba(232,160,32,0.1)";
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.borderColor = "rgba(232,160,32,0.25)";
-              e.currentTarget.style.background = "rgba(232,160,32,0.05)";
-            }}
-          >
-            <div style={{ fontSize: "2rem", marginBottom: "0.75rem" }}>🧠</div>
-            <h3 style={{ color: "#E8A020", fontFamily: "DM Mono, monospace", fontSize: "0.8rem", letterSpacing: "0.08em", marginBottom: "0.5rem" }}>
-              SITUATIONAL JUDGMENT
-            </h3>
-            <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "0.85rem", lineHeight: 1.5, fontWeight: 300, marginBottom: "0.75rem" }}>
-              Real-world scenarios. Build decision-making skills beyond the exam.
-            </p>
-            <div style={{ color: "#E8A020", fontSize: "0.72rem", fontFamily: "DM Mono, monospace", opacity: 0.8 }}>
-              30 scenarios · All domains
-            </div>
-          </div>
+
         </div>
       </div>
 

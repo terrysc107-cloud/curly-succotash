@@ -52,7 +52,6 @@ const CERTS = [
   { code: "CRCST", name: "Central Service Technician", color: "#0D7377", accent: "#14BDAC", icon: "⚙️", questions: 400, desc: "The foundational certification. Master sterilization, decontamination, and instrument processing." },
   { code: "CHL",   name: "Healthcare Leader",          color: "#1A4A8A", accent: "#4A90D9", icon: "🎖️", questions: 180, desc: "Lead with authority. Demonstrate management, quality, and regulatory expertise." },
   { code: "CER",   name: "Endoscope Reprocessor",      color: "#5B2D8E", accent: "#9B59D6", icon: "🔬", questions: 147, desc: "The specialist cert. Master flexible and rigid endoscope reprocessing protocols." },
-  { code: "CIS",   name: "Instrument Specialist",      color: "#7A3000", accent: "#E85D04", icon: "⚕️", questions: 160, desc: "Deep expertise in surgical instrument care, function, and reprocessing." },
 ];
 
 // ─── FEATURES ─────────────────────────────────────────────────────────────────
@@ -84,8 +83,8 @@ const PLANS = [
   },
   {
     name: "Pro",
-    price: "$14.99",
-    period: "/month",
+    price: "$99",
+    period: " one time",
     highlight: true,
     features: [
       "Unlimited practice questions",
@@ -95,8 +94,8 @@ const PLANS = [
       "Pause & resume any session",
       "Priority badge processing",
     ],
-    cta: "Start Pro",
-    note: "Cancel anytime",
+    cta: "Get Pro",
+    note: "One-time payment, lifetime access",
   },
   {
     name: "Lifetime",

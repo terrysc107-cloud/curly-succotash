@@ -687,7 +687,6 @@ function AuthScreen() {
               <option value="CRCST">CRCST — Central Service Technician</option>
               <option value="CHL">CHL — Healthcare Leader</option>
               <option value="CER">CER — Endoscope Reprocessor</option>
-              <option value="CIS">CIS — Instrument Specialist</option>
               <option value="unsure">Not sure yet</option>
             </select>
 
