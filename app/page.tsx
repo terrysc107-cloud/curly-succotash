@@ -8,6 +8,7 @@ import { TestimonialsSection } from "@/components/testimonials-section"
 import { IntakeSection } from "@/components/intake-section"
 import { FooterNew } from "@/components/footer-new"
 
+// Qualified Resume Co. — Resume Builder Landing Page
 export default function Home() {
   return (
     <main>
