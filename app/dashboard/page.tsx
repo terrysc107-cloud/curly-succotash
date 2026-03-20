@@ -3,6 +3,7 @@
 // Dashboard - certification selector
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 
 interface Certification {
@@ -52,6 +53,7 @@ const certifications: Certification[] = [
 const totalQuestions = 400 + 240 + 360
 
 export default function DashboardPage() {
+  const router = useRouter()
   const [earnedCerts, setEarnedCerts] = useState<{cert: string}[]>([])
 
   useEffect(() => {
@@ -227,7 +229,7 @@ export default function DashboardPage() {
           <div className="text-xs tracking-widest text-text-3 mb-6 text-center">
             STUDY FEATURES
           </div>
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-4 gap-6 mb-8">
             {[
               { icon: '1', title: 'Practice Quiz', desc: 'Instant feedback on 20 questions' },
               { icon: '2', title: 'Flashcards', desc: 'Flip through cards to memorize' },
@@ -242,6 +244,40 @@ export default function DashboardPage() {
                 <div className="text-xs text-text-3">{feature.desc}</div>
               </div>
             ))}
+          </div>
+
+          {/* Situational Judgment Card */}
+          <div
+            onClick={() => router.push("/quiz/scenarios")}
+            style={{
+              background: "rgba(232,160,32,0.05)",
+              border: "2px solid rgba(232,160,32,0.25)",
+              borderRadius: "16px",
+              padding: "1.5rem",
+              cursor: "pointer",
+              transition: "all 0.2s",
+              maxWidth: "400px",
+              margin: "0 auto",
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.borderColor = "#E8A020";
+              e.currentTarget.style.background = "rgba(232,160,32,0.1)";
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.borderColor = "rgba(232,160,32,0.25)";
+              e.currentTarget.style.background = "rgba(232,160,32,0.05)";
+            }}
+          >
+            <div style={{ fontSize: "2rem", marginBottom: "0.75rem" }}>🧠</div>
+            <h3 style={{ color: "#E8A020", fontFamily: "DM Mono, monospace", fontSize: "0.8rem", letterSpacing: "0.08em", marginBottom: "0.5rem" }}>
+              SITUATIONAL JUDGMENT
+            </h3>
+            <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "0.85rem", lineHeight: 1.5, fontWeight: 300, marginBottom: "0.75rem" }}>
+              Real-world scenarios. Build decision-making skills beyond the exam.
+            </p>
+            <div style={{ color: "#E8A020", fontSize: "0.72rem", fontFamily: "DM Mono, monospace", opacity: 0.8 }}>
+              30 scenarios · All domains
+            </div>
           </div>
         </div>
       </div>
